@@ -4,7 +4,7 @@
 
 // Objects
 
-// The bio object
+// Bio object
 var bio = {
 	"name": "Shadab Khan",
 	"role": "Front End Web Developer",
@@ -20,6 +20,30 @@ var bio = {
 	"biopic": "images/profile.jpg"
 };
 
+
+//Work object
+var work = {
+	"jobs": [
+		{
+			"employer": "S&P Capital IQ",
+			"title": "Infrastructure Systems Engineer",
+			"location": "Gurgaon",
+			"dates": "July 2015 - June 2016",
+			"description": "Work involved monitoring the Capital IQ platform and working to ensure that" +
+				" the platform is available 24*7. Learnt the use of tools like ExtraHop, CatchPoint and Nagios."
+		},
+		{
+			"employer": "Opinia 360",
+			"title": "Web Developer",
+			"location": "New Delhi",
+			"dates": "August 2016 - October 2016",
+			"description": "Developed the Opinia 360 platform showcase website as well as the client side pages."
+		}
+	]
+};
+
+
+//Display Functions
 
 // Function to display bio section
 bio.display = function() {
@@ -81,5 +105,32 @@ bio.display = function() {
 };
 
 
+//Function to display work object
+work.display = function() {
+	work.jobs.forEach(function(job) {
+		$("#workExperience").append(HTMLworkStart);
+
+		//Work employer and title
+		var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", job.employer);
+		var formattedWorkTitle = HTMLworkTitle.replace("%data%", job.title);
+
+		$(".work-entry:last").append(formattedWorkEmployer + formattedWorkTitle);
+
+		//Work dates
+		var formattedWorkDates = HTMLworkDates.replace("%data%", job.dates);
+		$(".work-entry:last").append(formattedWorkDates);
+
+		//Work location
+		var formattedWorkLocation = HTMLworkLocation.replace("%data%", job.location);
+		$(".work-entry:last").append(formattedWorkLocation);
+
+		var formattedWorkDesc = HTMLworkDescription.replace("%data%", job.description);
+		$(".work-entry:last").append(formattedWorkDesc);
+	});
+};
+
+
 // Calling the functions to display sections of the resume
 bio.display();
+
+work.display();
