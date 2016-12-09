@@ -43,6 +43,30 @@ var work = {
 };
 
 
+//Project object
+var projects = {
+	"projects": [
+		{
+			"title": "Reading Age Determination",
+			"dates": "July 2014 - November 2014",
+			"description": "Determining the readability of a particular text. Using the traditional " +
+			"and new techniques we judge whether a particular text is suitable for a particular age.",
+			"images": ["images/flesch-index.jpg",
+				"images/flesch-reading-ease.png"]
+		},
+		{
+			"title": "Musical Instruments Identification",
+			"dates": "January 2015 - May 2015",
+			"description": "Identifying the instruments being played in a piece of music. Trained a neural " +
+			"network with five instruments to start with and used the neural networl " +
+			"to identify a musical instrument in an audio file.",
+			"images": ["images/musical-instruments.jpg",
+				"images/neural-network.png"]
+		}
+	]
+};
+
+
 //Display Functions
 
 // Function to display bio section
@@ -130,7 +154,38 @@ work.display = function() {
 };
 
 
+//Function to display project object
+projects.display = function() {
+	projects.projects.forEach(function(project) {
+
+		//project-entry div
+		$("#projects").append(HTMLprojectStart);
+
+		//Project title
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", project.title);
+		$(".project-entry:last").append(formattedProjectTitle);
+
+		//Project dates
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", project.dates);
+		$(".project-entry:last").append(formattedProjectDates);
+
+		//Project description
+		var formattedProjectDesc = HTMLprojectDescription.replace("%data%", project.description);
+		$(".project-entry:last").append(formattedProjectDesc);
+
+		//Project images
+		project.images.forEach(function(image) {
+			var formattedProjectImage = HTMLprojectImage.replace("%data%", image);
+			$(".project-entry:last").append(formattedProjectImage);
+		});
+
+	});
+};
+
+
 // Calling the functions to display sections of the resume
 bio.display();
 
 work.display();
+
+projects.display();
