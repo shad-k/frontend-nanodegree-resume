@@ -67,6 +67,44 @@ var projects = {
 };
 
 
+//Education object
+var education = {
+	"schools": [
+		{
+			"name": "Apeejay School, Sheikh Sarai",
+			"location": "New Delhi",
+			"degree": "High School",
+			"majors": ["Physics", "Chemistry", "Maths", "Physical Education"],
+			"dates": "July 1997 - May 2011",
+			"url": "http://www.apeejay.edu/sheikhsarai/"
+		},
+		{
+			"name": "Jamia Millia Islamia",
+			"location": "New Delhi",
+			"degree": "Bachelors in Technology",
+			"majors": ["Computer Science Engineering"],
+			"dates": "July 2011 - May 2015",
+			"url": "http://www.jmi.ac.in"
+		}
+	],
+
+	"onlineCourses": [
+		{
+			"title": "Complete Web Developer Course",
+			"school": "Udemy",
+			"dates": "January 2016 - June 2016",
+			"url": "https://www.udemy.com/complete-web-development-course/"
+		},
+		{
+			"title": "Front End Nano Degree",
+			"school": "Udacity",
+			"dates": "In progress",
+			"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+		}
+	]
+};
+
+
 //Display Functions
 
 // Function to display bio section
@@ -183,9 +221,61 @@ projects.display = function() {
 };
 
 
+//Function to display education object
+education.display = function() {
+	education.schools.forEach(function(school) {
+
+		//education-entry div
+		$("#education").append(HTMLschoolStart);
+
+		//Name of school and degree
+		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
+
+		//School dates
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+		$(".education-entry:last").append(formattedSchoolDates);
+
+		//School Location
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.location);
+		$(".education-entry:last").append(formattedSchoolLocation);
+
+		//School major
+		school.majors.forEach(function(major) {
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", major);
+			$(".education-entry:last").append(formattedSchoolMajor);
+		});
+	});
+
+	$("#education").append(HTMLonlineClasses);
+
+	education.onlineCourses.forEach(function(course) {
+
+		//education-entry div
+		$("#education").append(HTMLschoolStart);
+
+		//Course title and school
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
+		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
+
+		//Course dates
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", course.dates);
+		$(".education-entry:last").append(formattedOnlineDates);
+
+		//Course url
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", course.url);
+		$(".education-entry:last").append(formattedOnlineURL);
+	});
+};
+
+
 // Calling the functions to display sections of the resume
 bio.display();
 
 work.display();
 
 projects.display();
+
+education.display();
