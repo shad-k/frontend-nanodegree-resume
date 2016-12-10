@@ -267,7 +267,7 @@ education.display = function() {
 };
 
 
-// Calling the functions to display sections of the resume
+// Calling the functions to display all the sections of the resume
 bio.display();
 
 work.display();
@@ -301,4 +301,5 @@ function displayFooter() {
 	$("#footerContacts").append(formattedFooterLocation);
 }
 
+// Calling the display function for footer
 displayFooter();
