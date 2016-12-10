@@ -29,8 +29,7 @@ var work = {
 			"title": "Infrastructure Systems Engineer",
 			"location": "S&P Capital IQ, Gurgaon",
 			"dates": "July 2015 - June 2016",
-			"description": "Work involved monitoring the Capital IQ platform and working to ensure that" +
-				" the platform is available 24*7. Learnt the use of tools like ExtraHop, CatchPoint and Nagios."
+			"description": "Work involved monitoring the Capital IQ platform and working to ensure that the platform is available 24*7. Learnt the use of tools like ExtraHop, CatchPoint and Nagios."
 		},
 		{
 			"employer": "Opinia 360",
@@ -49,17 +48,14 @@ var projects = {
 		{
 			"title": "Reading Age Determination",
 			"dates": "July 2014 - November 2014",
-			"description": "Determining the readability of a particular text. Using the traditional " +
-			"and new techniques we judge whether a particular text is suitable for a particular age.",
+			"description": "Determining the readability of a particular text. Using the traditional and new techniques we judge whether a particular text is suitable for a particular age.",
 			"images": ["images/flesch-index.jpg",
 				"images/flesch-reading-ease.png"]
 		},
 		{
 			"title": "Musical Instruments Identification",
 			"dates": "January 2015 - May 2015",
-			"description": "Identifying the instruments being played in a piece of music. Trained a neural " +
-			"network with five instruments to start with and used the neural networl " +
-			"to identify a musical instrument in an audio file.",
+			"description": "Identifying the instruments being played in a piece of music. Trained a neural network with five instruments to start with and used the neural networl to identify a musical instrument in an audio file.",
 			"images": ["images/musical-instruments.jpg",
 				"images/neural-network.png"]
 		}

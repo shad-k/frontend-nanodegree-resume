@@ -153,6 +153,15 @@ a {
   padding: 10px;
 }
 
+#skills {
+  background-color: #f3f3f3;
+}
+
+.skill {
+  color: #565656;
+  font-size: 1.2em;
+}
+
 .center-content {
   padding: 2.5% 5%;
 }
