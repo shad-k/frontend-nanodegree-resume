@@ -283,3 +283,26 @@ education.display();
 
 //Display the map at the bottom
 $("#mapDiv").append(googleMap);
+
+
+// Function to display the footer
+function displayFooter() {
+
+	//Mobile
+	var formattedFooterMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	$("#footerContacts").append(formattedFooterMobile);
+
+	//Email
+	var formattedFooterEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#footerContacts").append(formattedFooterEmail);
+
+	//Github
+	var formattedFooterGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#footerContacts").append(formattedFooterGithub);
+
+	//Location
+	var formattedFooterLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#footerContacts").append(formattedFooterLocation);
+}
+
+displayFooter();
