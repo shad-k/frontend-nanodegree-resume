@@ -279,3 +279,7 @@ work.display();
 projects.display();
 
 education.display();
+
+
+//Display the map at the bottom
+$("#mapDiv").append(googleMap);
