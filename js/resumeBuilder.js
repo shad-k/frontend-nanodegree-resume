@@ -13,7 +13,7 @@ var bio = {
 		"email": "shadab.webdev@gmail.com",
 		"github": "shad-k",
 		"twitter": "@shadab2005",
-		"location": "New Delhi"
+		"location": "CSIR Apartments, Maharani Bagh, New Delhi"
 	},
 	"welcomeMessage": "I develop awesome websites and web apps",
 	"skills": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap"],
@@ -27,7 +27,7 @@ var work = {
 		{
 			"employer": "S&P Capital IQ",
 			"title": "Infrastructure Systems Engineer",
-			"location": "Gurgaon",
+			"location": "S&P Capital IQ, Gurgaon",
 			"dates": "July 2015 - June 2016",
 			"description": "Work involved monitoring the Capital IQ platform and working to ensure that" +
 				" the platform is available 24*7. Learnt the use of tools like ExtraHop, CatchPoint and Nagios."
@@ -35,7 +35,7 @@ var work = {
 		{
 			"employer": "Opinia 360",
 			"title": "Web Developer",
-			"location": "New Delhi",
+			"location": "Opinia 360, New Delhi",
 			"dates": "August 2016 - October 2016",
 			"description": "Developed the Opinia 360 platform showcase website as well as the client side pages."
 		}
@@ -72,7 +72,7 @@ var education = {
 	"schools": [
 		{
 			"name": "Apeejay School, Sheikh Sarai",
-			"location": "New Delhi",
+			"location": "Apeejay School, Sheikh Sarai, New Delhi",
 			"degree": "High School",
 			"majors": ["Physics", "Chemistry", "Maths", "Physical Education"],
 			"dates": "July 1997 - May 2011",
@@ -80,7 +80,7 @@ var education = {
 		},
 		{
 			"name": "Jamia Millia Islamia",
-			"location": "New Delhi",
+			"location": "Jamia Millia Islamia, New Delhi",
 			"degree": "Bachelors in Technology",
 			"majors": ["Computer Science Engineering"],
 			"dates": "July 2011 - May 2015",
