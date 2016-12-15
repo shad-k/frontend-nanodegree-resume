@@ -160,6 +160,25 @@ bio.display = function() {
 		var formattedSkills = HTMLskills.replace("%data%", skill);
 		$("#skills").append(formattedSkills);
 	});
+
+
+	//Displaying the bio details on the footer
+
+	//Mobile
+	var formattedFooterMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	$("#footerContacts").append(formattedFooterMobile);
+
+	//Email
+	var formattedFooterEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#footerContacts").append(formattedFooterEmail);
+
+	//Github
+	var formattedFooterGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#footerContacts").append(formattedFooterGithub);
+
+	//Location
+	var formattedFooterLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#footerContacts").append(formattedFooterLocation);
 };
 
 
@@ -225,7 +244,7 @@ education.display = function() {
 		$("#education").append(HTMLschoolStart);
 
 		//Name of school and degree
-		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name).replace("#", school.url);
 		var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
 		$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
 
@@ -252,7 +271,7 @@ education.display = function() {
 		$("#education").append(HTMLschoolStart);
 
 		//Course title and school
-		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", course.title).replace("#", course.url);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", course.school);
 		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
 
@@ -261,7 +280,7 @@ education.display = function() {
 		$(".education-entry:last").append(formattedOnlineDates);
 
 		//Course url
-		var formattedOnlineURL = HTMLonlineURL.replace("%data%", course.url);
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", course.url).replace("#", course.url);
 		$(".education-entry:last").append(formattedOnlineURL);
 	});
 };
@@ -279,27 +298,3 @@ education.display();
 
 //Display the map at the bottom
 $("#mapDiv").append(googleMap);
-
-
-// Function to display the footer
-function displayFooter() {
-
-	//Mobile
-	var formattedFooterMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	$("#footerContacts").append(formattedFooterMobile);
-
-	//Email
-	var formattedFooterEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	$("#footerContacts").append(formattedFooterEmail);
-
-	//Github
-	var formattedFooterGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	$("#footerContacts").append(formattedFooterGithub);
-
-	//Location
-	var formattedFooterLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	$("#footerContacts").append(formattedFooterLocation);
-}
-
-// Calling the display function for footer
-displayFooter();
